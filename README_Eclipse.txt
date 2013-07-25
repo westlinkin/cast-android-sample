@@ -4,7 +4,7 @@ The goal of this sample is to show developers how to use the Google Cast
 technology, and not to demonstrate Android programming best practices.
 
 For more information on Android best practices, please see
-http://developer.android.com/training.index.html
+http://developer.android.com/training/index.html
 
 Before you Start:
 
