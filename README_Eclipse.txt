@@ -13,7 +13,8 @@ http://developer.android.com/sdk/installing/index.html and follow the
 instructions there.
 
 2. You should have the Cast SDK and all necessary support libraries installed.
-For instructions on installation, go to developers.google.com/cast.
+For instructions on installation, go to developers.google.com/cast, or see the
+included INSTALL_CAST_ECLIPSE.txt.
 
 3. You should also already have an app name and receiver URLs whitelisted,
 so that your device knows where to find your receiver app. If you're not sure
@@ -44,7 +45,7 @@ your Eclipse workspace.
 3. Hit Finish. The project you just created should show up in your workspace,
    with errors if you don't have the Cast SDK and support libraries configured.
    See developers.google.com/cast for up-to-date installation instructions.
-4. If no errors pop up, the demo project is ready to be run.
+4. If no errors pop up, the demo project is ready to be built.
 
 ***
 
