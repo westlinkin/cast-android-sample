@@ -105,7 +105,8 @@ public class CastSampleActivity extends FragmentActivity implements MediaRouteAd
         MediaRouteHelper.registerMinimalMediaRouteProvider(mCastContext, this);
         mMediaRouter = MediaRouter.getInstance(getApplicationContext());
         mMediaRouteSelector = MediaRouteHelper
-                .buildMediaRouteSelector(MediaRouteHelper.CATEGORY_CAST);
+                .buildMediaRouteSelector(MediaRouteHelper.CATEGORY_CAST,
+                        getResources().getString(R.string.app_name), null);
 
         mMediaRouteButton = (MediaRouteButton) findViewById(R.id.media_route_button);
         mMediaRouteButton.setRouteSelector(mMediaRouteSelector);
