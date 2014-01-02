@@ -1,0 +1,9 @@
+/bin
+**/*.DS_Store
+/gen
+/target
+**/com_crashlytics_export_string.xml
+res/values/com_crashlytics_export_strings.xml
+/.crashlytics_data
+/.google_apis
+/.apt_generated
