@@ -104,9 +104,9 @@ public class CastSampleActivity extends FragmentActivity implements MediaRouteAd
 
         MediaRouteHelper.registerMinimalMediaRouteProvider(mCastContext, this);
         mMediaRouter = MediaRouter.getInstance(getApplicationContext());
+        // three args's method is wrong
         mMediaRouteSelector = MediaRouteHelper
-                .buildMediaRouteSelector(MediaRouteHelper.CATEGORY_CAST,
-                        getResources().getString(R.string.app_name), null);
+                .buildMediaRouteSelector(MediaRouteHelper.CATEGORY_CAST);
 
         mMediaRouteButton = (MediaRouteButton) findViewById(R.id.media_route_button);
         mMediaRouteButton.setRouteSelector(mMediaRouteSelector);
@@ -361,6 +361,8 @@ public class CastSampleActivity extends FragmentActivity implements MediaRouteAd
             }
         }
         mSession = null;
+        MediaRouteHelper.unregisterMediaRouteProvider(mCastContext);
+        mCastContext.dispose();
         super.onDestroy();
     }
 
@@ -371,6 +373,7 @@ public class CastSampleActivity extends FragmentActivity implements MediaRouteAd
     private class MyMediaRouterCallback extends MediaRouter.Callback {
         @Override
         public void onRouteSelected(MediaRouter router, RouteInfo route) {
+        	logVIfEnabled(TAG, "on route selected");
             MediaRouteHelper.requestCastDeviceForRoute(route);
         }
 
@@ -548,8 +551,10 @@ public class CastSampleActivity extends FragmentActivity implements MediaRouteAd
      * devices.
      */
     protected final void setMediaRouteButtonVisible() {
+    	logVIfEnabled(TAG, "media router, is route available: " + mMediaRouter.isRouteAvailable(mMediaRouteSelector, 0));
+//    	mMediaRouteButton.setVisibility(View.VISIBLE);
         mMediaRouteButton.setVisibility(
-                mMediaRouter.isRouteAvailable(mMediaRouteSelector, 0) ? View.VISIBLE : View.GONE);
+                mMediaRouter.isRouteAvailable(mMediaRouteSelector, 0) ? View.VISIBLE : View.INVISIBLE);
     }
 
     /**
