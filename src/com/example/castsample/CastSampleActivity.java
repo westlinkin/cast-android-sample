@@ -106,7 +106,7 @@ public class CastSampleActivity extends FragmentActivity implements MediaRouteAd
         mMediaRouter = MediaRouter.getInstance(getApplicationContext());
         // three args's method is wrong
         mMediaRouteSelector = MediaRouteHelper
-                .buildMediaRouteSelector(MediaRouteHelper.CATEGORY_CAST);
+                .buildMediaRouteSelector(MediaRouteHelper.CATEGORY_CAST, getString(R.string.app_name), null);
 
         mMediaRouteButton = (MediaRouteButton) findViewById(R.id.media_route_button);
         mMediaRouteButton.setRouteSelector(mMediaRouteSelector);
@@ -551,7 +551,7 @@ public class CastSampleActivity extends FragmentActivity implements MediaRouteAd
      * devices.
      */
     protected final void setMediaRouteButtonVisible() {
-    	logVIfEnabled(TAG, "media router, is route available: " + mMediaRouter.isRouteAvailable(mMediaRouteSelector, 0));
+//    	logVIfEnabled(TAG, "media router, is route available: " + mMediaRouter.isRouteAvailable(mMediaRouteSelector, 0));
 //    	mMediaRouteButton.setVisibility(View.VISIBLE);
         mMediaRouteButton.setVisibility(
                 mMediaRouter.isRouteAvailable(mMediaRouteSelector, 0) ? View.VISIBLE : View.INVISIBLE);

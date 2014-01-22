@@ -21,7 +21,7 @@ limitations under the License.
     
     <string name="media_route_menu_title">Play on&#8230;</string>
     
-    <string name="app_name">7d6d0d44-d974-4fe4-95af-4ff66f49bcfc -> http://192.168.2.234:8000/receiver.html</string>
+    <string name="app_name">7d6d0d44-d974-4fe4-95af-4ff66f49bcfc</string>
     <string name="tap_icon">\n\n      Tap Cast Icon to Select Cast Device</string>
     <string name="medial_dialog_title">Please Select Media</string>
     <string name="tap_to_select">TAP to Select Media</string>
