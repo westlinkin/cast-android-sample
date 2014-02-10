@@ -1,5 +1,6 @@
-cast-android-sample
-===================
+
+
+<h1>Due to google cast api update, this project is no longer being maintained.</h1>
 
 Sample Media Player app for the Chromecast and Android devices.
 
